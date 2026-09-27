@@ -1,0 +1,17 @@
+#!/bin/zsh --no-rcs
+source ${0:a:h}/defaults
+curl -s -f $URL/curators  | jq '
+{
+  items: [
+    .curators[] | {
+      uid: .,
+      title: .,
+      subtitle: "Set \(.) as the active curator",
+      arg: .,
+      icon: {
+        path: "icon.png"
+      }
+    }
+  ]
+}
+'

@@ -1,0 +1,14 @@
+if [[ ! -v URL ]]; then
+	URL="http://localhost:7767"
+fi
+if [[ ! -v CONFIG ]]; then
+	CONFIG="$HOME/.markdown-curator"
+fi
+
+init_active_curator () {
+	if [[ ! -a $CONFIG ]]; then
+		print >&2 "Active curator not set"
+		exit 1
+	fi
+	CURATOR=$(cat $CONFIG)
+}
