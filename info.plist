@@ -184,7 +184,7 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Commands on top of Vincent's Markdown Curator to pull meaningful data live from a wiki of notes.</string>
+	<string>Commands on top of Vincent's Markdown Curator to pull meaningful data from a wiki of notes and act upon it.</string>
 	<key>uidata</key>
 	<dict>
 		<key>0C8F484E-9C0F-4971-B7A5-7BBCB68D44E0</key>
