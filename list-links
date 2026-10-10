@@ -1,0 +1,15 @@
+#!/bin/zsh --no-rcs
+source ${0:a:h}/defaults
+require_env document
+init_active_curator
+curl -s -f -G "$URL/curators/$CURATOR/queries/links" --data-urlencode "document=$document" | jq '
+{
+  items: [
+    .items[] | {
+      uid: .url,
+      title: .name,
+      arg: .url
+    }
+  ]
+}
+'

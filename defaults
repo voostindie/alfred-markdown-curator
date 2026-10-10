@@ -1,7 +1,7 @@
-if (( ${+URL} )); then
+if [[ ! -v URL ]]; then
 	URL="http://localhost:7767"
 fi
-if (( ${+CONFIG} )); then
+if [[ ! -v CONFIG ]]; then
 	CONFIG="$HOME/.markdown-curator"
 fi
 
@@ -11,4 +11,11 @@ init_active_curator () {
 		exit 1
 	fi
 	CURATOR=$(cat $CONFIG)
+}
+
+require_env () {
+    if [[ ! -v $1 ]]; then
+        print >&2 "Required environment variable missing: $1"
+        exit 1
+    fi
 }

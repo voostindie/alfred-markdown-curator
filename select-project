@@ -1,5 +1,7 @@
 #!/bin/zsh --no-rcs
 source ${0:a:h}/defaults
+require_env filepath
+require_env document
 init_active_curator
 jq -n '
 {
@@ -7,16 +9,32 @@ jq -n '
     {
       uid: $ENV.filepath,
       arg: "file://\($ENV.filepath)",
-      title: "Open \($ENV.document) in default editor",
+      title: "Open in default editor",
       icon: {
         type: "fileicon",
         path: $ENV.filepath
       }
     },
+    {
+      uid: $ENV.filepath,
+      arg: "alfred://runtrigger/nl.ulso.curator/links/?argument=\($ENV.document)",
+      title: "Browse links",
+      icon: {
+        path: "/Applications/Alfred 5.app/Contents/Resources/appicon.icns"
+      }
+    },
+    {
+      uid: $ENV.filepath,
+      arg: "alfred://runtrigger/nl.ulso.curator/file/?argument=\($ENV.filepath)",
+      title: "Show file actions",
+      icon: {
+        path: "/Applications/Alfred 5.app/Contents/Resources/appicon.icns"
+      }
+    },
     ($ENV.omnifocus | select(. != null) | {
       uid: .,
       arg: .,
-      title: "Open \($ENV.document) in OmniFocus",
+      title: "Open in OmniFocus",
       icon: {
         path: "/Applications/OmniFocus.app/Contents/Resources/AppIcon.icns"
       }

@@ -1,7 +1,7 @@
 #!/bin/zsh --no-rcs
 source ${0:a:h}/defaults
 if (( # == 0 )); then
-	print >&2 "Name of the curator missing"
+	print >&2 "Curator name missing"
 	exit 1
 fi
 echo -n $1 > $CONFIG
