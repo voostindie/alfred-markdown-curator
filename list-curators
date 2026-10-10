@@ -8,9 +8,6 @@ curl -s -f $URL/curators  | jq '
       title: .,
       subtitle: "Set \(.) as the active curator",
       arg: .,
-      icon: {
-        path: "icon.png"
-      }
     }
   ]
 }
