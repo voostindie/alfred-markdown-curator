@@ -1,7 +1,7 @@
-if [[ ! -v URL ]]; then
+if (( ${+URL} )); then
 	URL="http://localhost:7767"
 fi
-if [[ ! -v CONFIG ]]; then
+if (( ${+CONFIG} )); then
 	CONFIG="$HOME/.markdown-curator"
 fi
 

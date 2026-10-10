@@ -437,7 +437,7 @@
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>http://localhost:7767</string>
+				<string></string>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
@@ -446,7 +446,7 @@
 				<true/>
 			</dict>
 			<key>description</key>
-			<string></string>
+			<string>Defaults to http://localhost:7767. Leave blank to use that.</string>
 			<key>label</key>
 			<string>Markdown Curator URL</string>
 			<key>type</key>
@@ -458,7 +458,7 @@
 			<key>config</key>
 			<dict>
 				<key>default</key>
-				<string>{env:HOME}/.markdown-curator</string>
+				<string></string>
 				<key>placeholder</key>
 				<string></string>
 				<key>required</key>
@@ -467,7 +467,7 @@
 				<true/>
 			</dict>
 			<key>description</key>
-			<string></string>
+			<string>Defaults to ~/.markdown-curator. Leave blank to use that.</string>
 			<key>label</key>
 			<string>Path to the settings</string>
 			<key>type</key>
