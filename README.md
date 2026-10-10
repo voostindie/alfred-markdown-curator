@@ -23,6 +23,15 @@ If not set, the scripts use defaults as defined in the aptly named `defaults` sc
 
 Note: I’m not proficient in ZSH, nor do I have the ambition to be. The scripts are far from pretty. The approach in these scripts is to be DRY and to bail out ASAP whenever something is wrong. Error handling can probably be better.
 
+## How to install
+
+I'm not (yet) releasing this code as an official Alfred workflow. Because of that the installation is a bit more complicated:
+
+- Clone this repository to a directory on disk.
+- Create a symlink from `~/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows` to the directory where you cloned this repository.
+
+Alfred will automatically detect the workflow and make it available. Updates that you pull in later will also automatically be available.
+
 ## Background
 
 I once built [Vincent’s Productivity Suite for Alfred](https://github.com/voostindie/vincents-productivity-suite-for-alfred) (vps).
