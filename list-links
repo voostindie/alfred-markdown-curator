@@ -4,12 +4,17 @@ require_env document
 init_active_curator
 curl -s -f -G "$URL/curators/$CURATOR/queries/links" --data-urlencode "document=$document" | jq '
 {
-  items: [
-    .items[] | {
-      uid: .url,
-      title: .name,
-      arg: .url
-    }
-  ]
-}
-'
+  items: (
+    if (.items | length) == 0 then
+      [{ title: "No results" }]
+    else
+      [
+        .items[] | {
+          uid: .url,
+          title: .name,
+          arg: .url
+        }
+      ]
+    end
+  )
+}'
