@@ -46,7 +46,3 @@ Over time some things happened:
 - At work, I can’t run the latest Ruby anymore, nor can I install Gems. My machine is getting increasingly locked down for security reasons.
 
 To cater for all this, I created this new project. Much less flexible, much less fancy. No Ruby, just plain shell scripting.
-
-## Attributions
-
-- [Markdown icon created by brajaomar_j - Flaticon](https://www.flaticon.com/free-icons/markdown)
