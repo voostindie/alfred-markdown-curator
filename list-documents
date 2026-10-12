@@ -1,10 +1,11 @@
 #!/bin/zsh --no-rcs
 source ${0:a:h}/defaults
 init_active_curator
-PROJECT_PATH=$(curl -s -f "$URL/curators/$CURATOR/queries/alfred" | jq -r '
-.items[] | select(.name == "projects") | .value
+require_env category
+document_path=$(curl -s -f "$URL/curators/$CURATOR/queries/alfred" | jq -r '
+.items[] | select(.name == $ENV.category) | .value
 ')
-curl -s -f "$URL/curators/$CURATOR/queries/ls?path=$PROJECT_PATH" | jq '
+curl -s -f -G "$URL/curators/$CURATOR/queries/ls" --data-urlencode "path=$document_path" | jq '
 {
   items: [
     .documents[] | {
