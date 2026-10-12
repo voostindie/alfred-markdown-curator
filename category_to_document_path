@@ -1,0 +1,14 @@
+#!/bin/zsh --no-rcs
+# Convert a document "category" to a document path. This indirection makes it
+# possible to have vaults with different folder names for certain categories,
+# e.g. English and Dutch. The "alfred" query in the curator lists all supported
+# categories and the associated path within the vault.
+source ${0:a:h}/defaults
+init_active_curator
+if (( # == 0 )); then
+  print >&2 "Required parameter missing: category to convert"
+  exit 1
+fi
+curl -s -f "$URL/curators/$CURATOR/queries/alfred" | jq --arg category "$1" -rj '
+  .items[] | select(.name == $category) | .value
+'

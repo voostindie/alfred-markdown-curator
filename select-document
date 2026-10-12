@@ -1,7 +1,15 @@
 #!/bin/zsh --no-rcs
+# Lists actions for a document in the vault.
+# This script requires 2 environment variables to be set: "document" and
+# "filepath", these are exposed as variables by the "list-documents".
+# This script applies to all categories of documents available. The first
+# couple of actions are generic; the other actions depend on the type of
+# properties that accompany the document; these properties are all the front
+# matter properties in the document itself. E.g. the "omnifocus" property is
+# added to all project documents when OmniFocus is configured in the vault.
 source ${0:a:h}/defaults
-require_env filepath
 require_env document
+require_env filepath
 init_active_curator
 jq -n '
 {
@@ -25,7 +33,7 @@ jq -n '
     },
     {
       uid: $ENV.filepath,
-      arg: "alfred://runtrigger/nl.ulso.curator/file/?argument=\($ENV.filepath)",
+      arg: "alfred://runtrigger/nl.ulso.curator/document/?argument=\($ENV.filepath)",
       title: "Show file actions",
       icon: {
         path: "/Applications/Alfred 5.app/Contents/Resources/appicon.icns"

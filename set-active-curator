@@ -1,4 +1,5 @@
 #!/bin/zsh --no-rcs
+# Sets the active curator by storing it in the configuration file.
 source ${0:a:h}/defaults
 if (( # == 0 )); then
 	print >&2 "Curator name missing"

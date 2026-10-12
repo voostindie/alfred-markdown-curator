@@ -1,22 +1,50 @@
 #!/bin/zsh --no-rcs
+# List all documents (and folders) in a path within the vault.
+# The path to search can be provided in two ways: as a program argument, or
+# as an environment variable "VAULT_PATH". The second option is used by Alfred.
 source ${0:a:h}/defaults
 init_active_curator
-require_env category
-document_path=$(curl -s -f "$URL/curators/$CURATOR/queries/alfred" | jq -r '
-.items[] | select(.name == $ENV.category) | .value
-')
-curl -s -f -G "$URL/curators/$CURATOR/queries/ls" --data-urlencode "path=$document_path" | jq '
+if (( # == 0 )); then
+  if [[ -v VAULT_PATH ]]; then
+    document_path="$VAULT_PATH"
+  else
+    document_path=""
+  fi
+else
+  document_path="$1"
+fi
+curl -s -f -G "$URL/curators/$CURATOR/queries/ls" --data-urlencode "path=$document_path" |
+jq --arg document_path "$document_path" '
 {
   items: [
-    .documents[] | {
-      uid: .path,
-      title: .name,
-      arg: .name,
-      variables: ({
-        document: .name,
-        filepath: .path
-      } + (if .properties.omnifocus then {omnifocus: .properties.omnifocus} else {} end))
-    }
+    (
+      .documents[] | {
+        uid: .path,
+        title: .name,
+        arg: .name,
+        variables: (
+          {
+            document: .name,
+            filepath: .path
+          }
+          + (if .properties.omnifocus
+             then {omnifocus: .properties.omnifocus}
+             else {}
+             end)
+        )
+      }
+    ),
+    (
+      .folders[] | {
+        uid: (if ($document_path | length) > 0 then "\($document_path)/\(.)" else . end),
+        title: .,
+        arg: (if ($document_path | length) > 0 then "\($document_path)/\(.)" else . end),
+        icon: {
+          type: "filetype",
+          path: "public.folder"
+        }
+      }
+    )
   ]
 }
 '

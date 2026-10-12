@@ -1,4 +1,5 @@
 #!/bin/zsh --no-rcs
+# Lists all available curators.
 source ${0:a:h}/defaults
 curl -s -f $URL/curators  | jq '
 {
