@@ -24,7 +24,10 @@ curl -s -f -G "$URL/curators/$CURATOR/queries/links" --data-urlencode "document=
         .items[] | {
           uid: .url,
           title: .name,
-          arg: .url
+          arg: .url,
+		  icon: {
+			path: "/Applications/Safari.app/Contents/Resources/AppIconUpdated.icns"
+		  }
         }
       ]
     end
