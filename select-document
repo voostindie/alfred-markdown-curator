@@ -15,24 +15,28 @@ jq -n '
 {
   items: [
     {
-      uid: $ENV.filepath,
-      arg: "file://\($ENV.filepath)",
-      title: "Open in default editor",
-      icon: {
-        type: "fileicon",
-        path: $ENV.filepath
-      }
-    },
-    {
-      uid: $ENV.filepath,
       arg: @uri "alfred://runtrigger/nl.ulso.curator/links/?argument=\($ENV.document)",
-      title: "Browse links",
+      title: "Show links",
       icon: {
         path: "/Applications/Alfred 5.app/Contents/Resources/appicon.icns"
       }
     },
     {
-      uid: $ENV.filepath,
+      arg: @uri "alfred://runtrigger/nl.ulso.curator/quicklook/?argument=\($ENV.filepath)",
+      title: "Quick Look document",
+      icon: {
+        path: "/System/Applications/Preview.app/Contents/Resources/AppIcon.icns"
+      }
+    },
+    {
+      arg: "file://\($ENV.filepath)",
+      title: "Open document in default editor",
+      icon: {
+        type: "fileicon",
+        path: $ENV.filepath
+	  }
+    },
+    {
       arg: @uri "alfred://runtrigger/nl.ulso.curator/document/?argument=\($ENV.filepath)",
       title: "Show file actions",
       icon: {
@@ -40,9 +44,8 @@ jq -n '
       }
     },
     ($ENV.omnifocus | select(. != null) | {
-      uid: .,
       arg: .,
-      title: "Open in OmniFocus",
+      title: "Open project in OmniFocus",
       icon: {
         path: "/Applications/OmniFocus.app/Contents/Resources/AppIcon.icns"
       }
