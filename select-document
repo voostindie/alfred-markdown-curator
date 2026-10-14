@@ -18,7 +18,7 @@ jq -n '
       arg: @uri "alfred://runtrigger/nl.ulso.curator/links/?argument=\($ENV.document)",
       title: "Show links",
       icon: {
-        path: "/Applications/Alfred 5.app/Contents/Resources/appicon.icns"
+        path: "/Applications/Safari.app/Contents/Resources/AppIconUpdated.icns"
       }
     },
     {
