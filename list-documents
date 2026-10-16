@@ -18,18 +18,19 @@ jq --arg document_path "$document_path" '
 {
   items: [
     (
-      .documents[] | {
-        uid: .path,
-        title: .name,
-        arg: .name,
+      .documents[] | . as $document |
+      (.name, .properties.aliases[]?) | {
+        uid: $document.path,
+        title: .,
+        arg: $document.name,
         variables: (
           {
-            document: .name,
-            filepath: .path,
-            sortable_title: .sortable_title
+            document: $document.name,
+            filepath: $document.path,
+            sortable_title: $document.sortable_title
           }
-          + (if .properties.omnifocus
-             then {omnifocus: .properties.omnifocus}
+          + (if $document.properties.omnifocus
+             then {omnifocus: $document.properties.omnifocus}
              else {}
              end)
         )

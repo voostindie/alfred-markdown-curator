@@ -709,6 +709,27 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>browser</key>
+				<string></string>
+				<key>skipqueryencode</key>
+				<false/>
+				<key>skipvarencode</key>
+				<false/>
+				<key>spaces</key>
+				<string></string>
+				<key>url</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openurl</string>
+			<key>uid</key>
+			<string>B99FF809-2A0D-41F3-BEA9-78083182629C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>availableviaurlhandler</key>
 				<true/>
 				<key>triggerid</key>
@@ -767,27 +788,6 @@
 			<string>91BD8F0A-A134-4FBE-9555-CC4E63719973</string>
 			<key>version</key>
 			<integer>3</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>browser</key>
-				<string></string>
-				<key>skipqueryencode</key>
-				<false/>
-				<key>skipvarencode</key>
-				<false/>
-				<key>spaces</key>
-				<string></string>
-				<key>url</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.openurl</string>
-			<key>uid</key>
-			<string>B99FF809-2A0D-41F3-BEA9-78083182629C</string>
-			<key>version</key>
-			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1615,7 +1615,7 @@
 		<key>0C8F484E-9C0F-4971-B7A5-7BBCB68D44E0</key>
 		<dict>
 			<key>xpos</key>
-			<real>565</real>
+			<real>1225</real>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
@@ -1673,7 +1673,7 @@
 		<key>3473C3E2-8155-45F0-8436-02613963A23A</key>
 		<dict>
 			<key>xpos</key>
-			<real>355</real>
+			<real>860</real>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
@@ -1707,7 +1707,7 @@
 			<key>xpos</key>
 			<real>1225</real>
 			<key>ypos</key>
-			<real>360</real>
+			<real>355</real>
 		</dict>
 		<key>447A353A-8C63-4AEF-BD25-4BE303460120</key>
 		<dict>
@@ -1818,7 +1818,7 @@
 		<key>91BD8F0A-A134-4FBE-9555-CC4E63719973</key>
 		<dict>
 			<key>xpos</key>
-			<real>355</real>
+			<real>860</real>
 			<key>ypos</key>
 			<real>355</real>
 		</dict>
@@ -1848,21 +1848,21 @@
 		<key>B8D699DA-E4B2-4CDC-9297-2C08506E9F94</key>
 		<dict>
 			<key>xpos</key>
-			<real>355</real>
+			<real>1440</real>
 			<key>ypos</key>
-			<real>200</real>
+			<real>205</real>
 		</dict>
 		<key>B99FF809-2A0D-41F3-BEA9-78083182629C</key>
 		<dict>
 			<key>xpos</key>
 			<real>1440</real>
 			<key>ypos</key>
-			<real>360</real>
+			<real>355</real>
 		</dict>
 		<key>BB29C621-5505-45BD-9600-7A8CF945647A</key>
 		<dict>
 			<key>xpos</key>
-			<real>785</real>
+			<real>1440</real>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
@@ -1894,7 +1894,7 @@
 		<key>CBB6CE8F-22FF-4293-867F-A2A09DE7817F</key>
 		<dict>
 			<key>xpos</key>
-			<real>240</real>
+			<real>315</real>
 			<key>ypos</key>
 			<real>385</real>
 		</dict>
