@@ -16,12 +16,19 @@ jq -n '
   items: [
     {
       arg: "file://\($ENV.filepath)",
-      title: "Open document in default editor",
+      title: "Open in default editor",
       icon: {
         type: "fileicon",
         path: $ENV.filepath
-	  }
+	    }
     },
+    ($ENV.MARKED_APP_ENABLED | select(. == "1") | {
+      arg: @uri "x-marked://open?file=\($ENV.filepath)",
+      title: "Open in Marked",
+      icon: {
+        path: "/Applications/Marked.app/Contents/Resources/AppIcon.icns"
+      }
+    }),
     {
       arg: @uri "alfred://runtrigger/nl.ulso.curator/links/?argument=\($ENV.document)",
       title: "Show links",

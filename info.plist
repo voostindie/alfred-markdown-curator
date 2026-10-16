@@ -1991,6 +1991,25 @@
 			<key>variable</key>
 			<string>CONFIG</string>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Enable support for Marked</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>MARKED_APP_ENABLED</string>
+		</dict>
 	</array>
 	<key>version</key>
 	<string></string>
