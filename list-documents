@@ -25,7 +25,8 @@ jq --arg document_path "$document_path" '
         variables: (
           {
             document: .name,
-            filepath: .path
+            filepath: .path,
+            sortable_title: .sortable_title
           }
           + (if .properties.omnifocus
              then {omnifocus: .properties.omnifocus}
