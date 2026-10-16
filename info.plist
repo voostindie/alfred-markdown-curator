@@ -1360,7 +1360,7 @@
 				<key>focusedappvariablename</key>
 				<string></string>
 				<key>keyword</key>
-				<string>r</string>
+				<string>s</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.snippet</string>
