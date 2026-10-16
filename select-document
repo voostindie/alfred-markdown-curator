@@ -30,7 +30,7 @@ jq -n '
       }
     },
     {
-      arg: @uri "alfred://runtrigger/nl.ulso.curator/document/?argument=\($ENV.filepath)",
+      arg: @uri "alfred://runtrigger/nl.ulso.curator/file/?argument=\($ENV.filepath)",
       title: "Show file actions",
       icon: {
         path: "/Applications/Alfred 5.app/Contents/Resources/appicon.icns"

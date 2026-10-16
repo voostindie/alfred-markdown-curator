@@ -680,7 +680,7 @@
 				<key>availableviaurlhandler</key>
 				<true/>
 				<key>triggerid</key>
-				<string>document</string>
+				<string>file</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.trigger.external</string>
@@ -1850,7 +1850,7 @@
 			<key>xpos</key>
 			<real>1440</real>
 			<key>ypos</key>
-			<real>205</real>
+			<real>200</real>
 		</dict>
 		<key>B99FF809-2A0D-41F3-BEA9-78083182629C</key>
 		<dict>
