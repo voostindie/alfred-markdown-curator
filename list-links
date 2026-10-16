@@ -4,17 +4,15 @@
 # as an environment variable "DOCUMENT". The second option is used by Alfred.
 source ${0:a:h}/defaults
 if (( # == 0 )); then
-  if [[ -v DOCUMENT ]]; then
-    document="$DOCUMENT"
-  else
+  if [[ ! -v DOCUMENT_NAME ]]; then
     print >&2 "Document name missing"
     exit 1
   fi
 else
-  document="$1"
+  DOCUMENT_NAME="$1"
 fi
 init_active_curator
-curl -s -f -G "$URL/curators/$CURATOR/queries/links" --data-urlencode "document=$document" | jq '
+curl -s -f -G "$URL/curators/$CURATOR/queries/links" --data-urlencode "document=$DOCUMENT_NAME" | jq '
 {
   items: (
     if (.items | length) == 0 then

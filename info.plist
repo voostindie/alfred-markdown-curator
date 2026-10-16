@@ -845,7 +845,7 @@
 				<false/>
 				<key>variables</key>
 				<dict>
-					<key>DOCUMENT</key>
+					<key>DOCUMENT_NAME</key>
 					<string>{query}</string>
 				</dict>
 			</dict>
@@ -893,7 +893,7 @@
 				<key>autopaste</key>
 				<true/>
 				<key>clipboardtext</key>
-				<string>{var:sortable_title}</string>
+				<string>{var:DOCUMENT_SNIPPET}</string>
 				<key>ignoredynamicplaceholders</key>
 				<false/>
 				<key>transient</key>
@@ -995,7 +995,7 @@
 					</dict>
 					<dict>
 						<key>inputstring</key>
-						<string>{var:document}</string>
+						<string>{var:DOCUMENT_NAME}</string>
 						<key>matchcasesensitive</key>
 						<false/>
 						<key>matchmode</key>

@@ -2,7 +2,7 @@
 
 This repository contains scripts to use within Alfred in combination with the embedded HTTP server of my [Markdown Curator](https://github.com/voostindie/markdown-curator) tool.
 
-With these scripts, “plain” JSON output from the various HTTP endpoints is converted into the [Alfred Script Filter JSON format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/).
+With these scripts, JSON output from the various HTTP endpoints is converted into the [Alfred Script Filter JSON format](https://www.alfredapp.com/help/workflows/inputs/script-filter/json/).
 
 Eventually, this set of scripts is intended to grow out into a complete Alfred workflow that can be shared across machines and people.
 

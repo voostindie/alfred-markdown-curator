@@ -6,15 +6,15 @@ source ${0:a:h}/defaults
 init_active_curator
 if (( # == 0 )); then
   if [[ -v VAULT_PATH ]]; then
-    document_path="$VAULT_PATH"
+    DOCUMENT_PATH="$VAULT_PATH"
   else
-    document_path=""
+    DOCUMENT_PATH=""
   fi
 else
-  document_path="$1"
+  DOCUMENT_PATH="$1"
 fi
-curl -s -f -G "$URL/curators/$CURATOR/queries/ls" --data-urlencode "path=$document_path" |
-jq --arg document_path "$document_path" '
+curl -s -f -G "$URL/curators/$CURATOR/queries/ls" --data-urlencode "path=$DOCUMENT_PATH" |
+jq --arg document_path "$DOCUMENT_PATH" '
 {
   items: [
     (
@@ -25,12 +25,12 @@ jq --arg document_path "$document_path" '
         arg: $document.name,
         variables: (
           {
-            document: $document.name,
-            filepath: $document.path,
-            sortable_title: $document.sortable_title
+            DOCUMENT_NAME: $document.name,
+            DOCUMENT_PATH: $document.path,
+            DOCUMENT_SNIPPET: $document.sortable_title
           }
           + (if $document.properties.omnifocus
-             then {omnifocus: $document.properties.omnifocus}
+             then {OMNIFOCUS_URL: $document.properties.omnifocus}
              else {}
              end)
         )
