@@ -1,0 +1,17 @@
+#!/bin/zsh --no-rcs
+# Decode an external trigger from Obsidian from the obsidian-alfred-trigger-
+# plugin. The argument of the trigger is a base64-encoded JSON object with
+# information about the document the user has active.
+# This script pulls the data from the JSON and prints the document name,
+# document path and finally specific properties, all on separate lines.
+source ${0:a:h}/defaults
+init_active_curator
+if (( # == 0 )); then
+  print >&2 "Required parameter missing: argument to process"
+  exit 1
+fi
+echo -n "$1" | base64 -d | jq -r '
+  .name,
+  .path,
+  (.properties.omnifocus // empty)
+'

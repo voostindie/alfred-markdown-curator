@@ -162,6 +162,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>3D0C0244-07E1-4BF3-9ADC-98106C7FADF2</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>C4D7F115-D738-4DA0-8FF3-1CF816B4FFA5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>3D943F63-8905-4968-8009-B721460780F6</key>
 		<array>
 			<dict>
@@ -357,6 +370,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>90EA5939-2ECB-4A1E-AD06-9306C6D94882</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>43733C6B-63F0-4111-9F2A-60E955324B1F</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>91762E61-4169-49C2-A43C-63799E4D4CCF</key>
 		<array>
 			<dict>
@@ -448,6 +474,19 @@
 				<false/>
 			</dict>
 		</array>
+		<key>C4D7F115-D738-4DA0-8FF3-1CF816B4FFA5</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>90EA5939-2ECB-4A1E-AD06-9306C6D94882</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>CBB6CE8F-22FF-4293-867F-A2A09DE7817F</key>
 		<array>
 			<dict>
@@ -531,6 +570,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>78D40568-0F30-466D-BF08-BD924F26ECD1</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>FD9721EF-A8A0-4EF6-B3AD-4FDEEBE8CF56</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>3D0C0244-07E1-4BF3-9ADC-98106C7FADF2</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -677,21 +729,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>availableviaurlhandler</key>
-				<true/>
-				<key>triggerid</key>
-				<string>file</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>52AE8B79-65EB-4660-94BD-F1C3CBF8DED0</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>jumpto</key>
 				<string>_popUpItemAction:</string>
 				<key>path</key>
@@ -703,6 +740,21 @@
 			<string>alfred.workflow.action.actioninalfred</string>
 			<key>uid</key>
 			<string>B8D699DA-E4B2-4CDC-9297-2C08506E9F94</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<true/>
+				<key>triggerid</key>
+				<string>file</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>52AE8B79-65EB-4660-94BD-F1C3CBF8DED0</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -853,6 +905,90 @@
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
 			<string>CBB6CE8F-22FF-4293-867F-A2A09DE7817F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<true/>
+				<key>triggerid</key>
+				<string>obsidian</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>FD9721EF-A8A0-4EF6-B3AD-4FDEEBE8CF56</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>process-obsidian-trigger</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>3D0C0244-07E1-4BF3-9ADC-98106C7FADF2</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>
+</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>split</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>C4D7F115-D738-4DA0-8FF3-1CF816B4FFA5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:split1}</string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>DOCUMENT_NAME</key>
+					<string>{var:split1}</string>
+					<key>DOCUMENT_PATH</key>
+					<string>{var:split2}</string>
+					<key>OMNIFOCUS_URL</key>
+					<string>{var:split3}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>90EA5939-2ECB-4A1E-AD06-9306C6D94882</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -1293,7 +1429,7 @@
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>category_to_document_path</string>
+				<string>convert-category-to-document-path</string>
 				<key>type</key>
 				<integer>8</integer>
 			</dict>
@@ -1693,6 +1829,13 @@
 			<key>ypos</key>
 			<real>690</real>
 		</dict>
+		<key>3D0C0244-07E1-4BF3-9ADC-98106C7FADF2</key>
+		<dict>
+			<key>xpos</key>
+			<real>465</real>
+			<key>ypos</key>
+			<real>395</real>
+		</dict>
 		<key>3D943F63-8905-4968-8009-B721460780F6</key>
 		<dict>
 			<key>note</key>
@@ -1707,7 +1850,7 @@
 			<key>xpos</key>
 			<real>1225</real>
 			<key>ypos</key>
-			<real>355</real>
+			<real>280</real>
 		</dict>
 		<key>447A353A-8C63-4AEF-BD25-4BE303460120</key>
 		<dict>
@@ -1746,7 +1889,7 @@
 			<key>xpos</key>
 			<real>40</real>
 			<key>ypos</key>
-			<real>200</real>
+			<real>165</real>
 		</dict>
 		<key>5A9D581A-1553-436D-BB7C-FE63E4BC4EC2</key>
 		<dict>
@@ -1808,6 +1951,13 @@
 			<key>ypos</key>
 			<real>1525</real>
 		</dict>
+		<key>90EA5939-2ECB-4A1E-AD06-9306C6D94882</key>
+		<dict>
+			<key>xpos</key>
+			<real>900</real>
+			<key>ypos</key>
+			<real>425</real>
+		</dict>
 		<key>91762E61-4169-49C2-A43C-63799E4D4CCF</key>
 		<dict>
 			<key>xpos</key>
@@ -1820,7 +1970,7 @@
 			<key>xpos</key>
 			<real>860</real>
 			<key>ypos</key>
-			<real>355</real>
+			<real>280</real>
 		</dict>
 		<key>9AAC0FF5-B415-48B6-80D5-BF2664533804</key>
 		<dict>
@@ -1850,14 +2000,14 @@
 			<key>xpos</key>
 			<real>1440</real>
 			<key>ypos</key>
-			<real>200</real>
+			<real>160</real>
 		</dict>
 		<key>B99FF809-2A0D-41F3-BEA9-78083182629C</key>
 		<dict>
 			<key>xpos</key>
 			<real>1440</real>
 			<key>ypos</key>
-			<real>355</real>
+			<real>280</real>
 		</dict>
 		<key>BB29C621-5505-45BD-9600-7A8CF945647A</key>
 		<dict>
@@ -1891,12 +2041,19 @@
 			<key>ypos</key>
 			<real>1120</real>
 		</dict>
+		<key>C4D7F115-D738-4DA0-8FF3-1CF816B4FFA5</key>
+		<dict>
+			<key>xpos</key>
+			<real>710</real>
+			<key>ypos</key>
+			<real>425</real>
+		</dict>
 		<key>CBB6CE8F-22FF-4293-867F-A2A09DE7817F</key>
 		<dict>
 			<key>xpos</key>
 			<real>315</real>
 			<key>ypos</key>
-			<real>385</real>
+			<real>310</real>
 		</dict>
 		<key>D2926E15-E4C9-4F83-82BE-C475A3A1088E</key>
 		<dict>
@@ -1912,7 +2069,7 @@
 			<key>xpos</key>
 			<real>40</real>
 			<key>ypos</key>
-			<real>355</real>
+			<real>280</real>
 		</dict>
 		<key>E78574B4-DBAD-4ABB-9571-285D991DD8DE</key>
 		<dict>
@@ -1928,9 +2085,9 @@
 			<key>note</key>
 			<string>Documents</string>
 			<key>xpos</key>
-			<real>45</real>
+			<real>40</real>
 			<key>ypos</key>
-			<real>515</real>
+			<real>560</real>
 		</dict>
 		<key>EF294AE9-EEAA-4C12-9BAA-CA030A289C91</key>
 		<dict>
@@ -1945,6 +2102,13 @@
 			<real>205</real>
 			<key>ypos</key>
 			<real>1285</real>
+		</dict>
+		<key>FD9721EF-A8A0-4EF6-B3AD-4FDEEBE8CF56</key>
+		<dict>
+			<key>xpos</key>
+			<real>40</real>
+			<key>ypos</key>
+			<real>395</real>
 		</dict>
 	</dict>
 	<key>userconfigurationconfig</key>

@@ -43,7 +43,7 @@ jq -n '
         path: "/Applications/Alfred 5.app/Contents/Resources/appicon.icns"
       }
     },
-    ($ENV.OMNIFOCUS_URL | select(. != null) | {
+    ($ENV.OMNIFOCUS_URL | select(. | length > 0) | {
       arg: .,
       title: "Open project in OmniFocus",
       icon: {
