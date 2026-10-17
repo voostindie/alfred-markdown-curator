@@ -51,12 +51,7 @@ Note: I’m not proficient in ZSH, nor do I have the ambition to be. The scripts
 
 ## How to install
 
-I'm not (yet) releasing this code as an official Alfred workflow. Because of that, installing it on your machine is more complicated then downloading it from the Alfred workflow directory:
-
-- Clone this repository to a directory on disk.
-- Create a symlink from `~/Library/Application Support/Alfred/Alfred.alfredpreferences/workflows` to the directory where you cloned this repository.
-
-Alfred will automatically detect the workflow and make it available. Updates that you pull in later will automatically be available.
+Download the latest `Markdown.Curator.alfredworkflow` file from the [releases](https://github.com/voostindie/alfred-markdown-curator-workflow/releases/latest) and install it by double-clicking it.
 
 ## Historical background
 
