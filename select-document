@@ -23,10 +23,23 @@ jq -n '
 	    }
     },
     ($ENV.MARKED_APP_ENABLED | select(. == "1") | {
-      arg: @uri "x-marked://open?file=\($ENV.DOCUMENT_PATH)",
+      arg: $ENV.DOCUMENT_PATH,
       title: "Open in Marked",
+      variables: {
+        APPLICATION: "Marked.app"
+      },
       icon: {
         path: "/Applications/Marked.app/Contents/Resources/AppIcon.icns"
+      }
+    }),
+    ($ENV.IA_WRITER_ENABLED | select(. == "1") | {
+      arg: $ENV.DOCUMENT_PATH,
+      title: "Open in iA Writer",
+      variables: {
+        APPLICATION: "iA Writer.app"
+      },
+      icon: {
+        path: "/Applications/iA Writer.app/Contents/Resources/Writer.icns"
       }
     }),
     {

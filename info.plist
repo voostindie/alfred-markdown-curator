@@ -192,7 +192,7 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B99FF809-2A0D-41F3-BEA9-78083182629C</string>
+				<string>B82274D6-1C35-4096-8E1D-C68BF783E27A</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -431,6 +431,31 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>B82274D6-1C35-4096-8E1D-C68BF783E27A</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>B99FF809-2A0D-41F3-BEA9-78083182629C</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>611D5DB5-365A-4F7D-9798-9C5FDB6B0ABD</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>7E76C11A-DE06-4DDC-B501-12700FE2359C</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -844,6 +869,41 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>passthroughargument</key>
+				<false/>
+				<key>variables</key>
+				<dict>
+					<key>DOCUMENT_NAME</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>CBB6CE8F-22FF-4293-867F-A2A09DE7817F</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>availableviaurlhandler</key>
+				<true/>
+				<key>triggerid</key>
+				<string>obsidian</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>FD9721EF-A8A0-4EF6-B3AD-4FDEEBE8CF56</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
 				<key>alfredfiltersresults</key>
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
@@ -891,41 +951,6 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>argument</key>
-				<string></string>
-				<key>passthroughargument</key>
-				<false/>
-				<key>variables</key>
-				<dict>
-					<key>DOCUMENT_NAME</key>
-					<string>{query}</string>
-				</dict>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.utility.argument</string>
-			<key>uid</key>
-			<string>CBB6CE8F-22FF-4293-867F-A2A09DE7817F</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>availableviaurlhandler</key>
-				<true/>
-				<key>triggerid</key>
-				<string>obsidian</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>FD9721EF-A8A0-4EF6-B3AD-4FDEEBE8CF56</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
@@ -945,6 +970,38 @@
 			<string>3D0C0244-07E1-4BF3-9ADC-98106C7FADF2</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:APPLICATION}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>1</integer>
+						<key>matchstring</key>
+						<string></string>
+						<key>outputlabel</key>
+						<string>application</string>
+						<key>uid</key>
+						<string>7E76C11A-DE06-4DDC-B501-12700FE2359C</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>url</string>
+				<key>hideelse</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>B82274D6-1C35-4096-8E1D-C68BF783E27A</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -991,6 +1048,29 @@
 			<string>90EA5939-2ECB-4A1E-AD06-9306C6D94882</string>
 			<key>version</key>
 			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>open -a $APPLICATION "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>11</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>611D5DB5-365A-4F7D-9798-9C5FDB6B0ABD</string>
+			<key>version</key>
+			<integer>2</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -1765,7 +1845,7 @@
 		<key>18EDB1DC-EF34-4907-BBB2-A88B51F4D128</key>
 		<dict>
 			<key>xpos</key>
-			<real>1440</real>
+			<real>1695</real>
 			<key>ypos</key>
 			<real>845</real>
 		</dict>
@@ -1848,9 +1928,9 @@
 		<key>43733C6B-63F0-4111-9F2A-60E955324B1F</key>
 		<dict>
 			<key>xpos</key>
-			<real>1225</real>
+			<real>1230</real>
 			<key>ypos</key>
-			<real>280</real>
+			<real>395</real>
 		</dict>
 		<key>447A353A-8C63-4AEF-BD25-4BE303460120</key>
 		<dict>
@@ -1913,6 +1993,13 @@
 			<real>310</real>
 			<key>ypos</key>
 			<real>1690</real>
+		</dict>
+		<key>611D5DB5-365A-4F7D-9798-9C5FDB6B0ABD</key>
+		<dict>
+			<key>xpos</key>
+			<real>1695</real>
+			<key>ypos</key>
+			<real>465</real>
 		</dict>
 		<key>63D24E32-1291-4256-B422-9ED17BB96906</key>
 		<dict>
@@ -1982,7 +2069,7 @@
 		<key>9DE2D425-825F-4081-8B11-A6C95023A373</key>
 		<dict>
 			<key>xpos</key>
-			<real>1440</real>
+			<real>1695</real>
 			<key>ypos</key>
 			<real>660</real>
 		</dict>
@@ -1995,24 +2082,31 @@
 			<key>ypos</key>
 			<real>1390</real>
 		</dict>
+		<key>B82274D6-1C35-4096-8E1D-C68BF783E27A</key>
+		<dict>
+			<key>xpos</key>
+			<real>1445</real>
+			<key>ypos</key>
+			<real>415</real>
+		</dict>
 		<key>B8D699DA-E4B2-4CDC-9297-2C08506E9F94</key>
 		<dict>
 			<key>xpos</key>
-			<real>1440</real>
+			<real>1695</real>
 			<key>ypos</key>
 			<real>160</real>
 		</dict>
 		<key>B99FF809-2A0D-41F3-BEA9-78083182629C</key>
 		<dict>
 			<key>xpos</key>
-			<real>1440</real>
+			<real>1695</real>
 			<key>ypos</key>
 			<real>280</real>
 		</dict>
 		<key>BB29C621-5505-45BD-9600-7A8CF945647A</key>
 		<dict>
 			<key>xpos</key>
-			<real>1440</real>
+			<real>1695</real>
 			<key>ypos</key>
 			<real>50</real>
 		</dict>
@@ -2173,6 +2267,25 @@
 			<string>checkbox</string>
 			<key>variable</key>
 			<string>MARKED_APP_ENABLED</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<false/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string></string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Enable support for iA Writer</string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>IA_WRITER_ENABLED</string>
 		</dict>
 	</array>
 	<key>version</key>
