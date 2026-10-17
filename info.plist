@@ -620,7 +620,7 @@
 	<key>createdby</key>
 	<string>Vincent Oostindie</string>
 	<key>description</key>
-	<string>Commands on top of the Markdown Curator HTTP server</string>
+	<string>Workflow on top of the Markdown Curator HTTP server</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -1825,7 +1825,15 @@
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>Commands on top of Vincent's Markdown Curator to pull meaningful data from a wiki of notes and act upon it.</string>
+	<string>Workflow on top of Vincent's Markdown Curator to pull meaningful data from a wiki of notes and act upon it.
+
+The Markdown Curator is a Java application that monitors a directory of notes, like an Obsidian vault or iA Writer library, that runs queries embedded in the content and writes the output but in the notes. It also embeds an HTTP server that exposes the queries as JSON to tools, like this Alfred workflow.
+
+Links: 
+
+- See &lt;https://github.com/voostindie/markdown-curator&gt; for the generic Markdown Curator system.
+- See &lt;https://github.com/voostindie/vincents-markdown-curator&gt; for my personal implementation with additional functionality.
+- See &lt;https://github.com/voostindie/obsidian-alfred-trigger-plugin&gt; for an Obsidian plugin that can trigger this workflow.</string>
 	<key>uidata</key>
 	<dict>
 		<key>0C8F484E-9C0F-4971-B7A5-7BBCB68D44E0</key>
@@ -2289,8 +2297,8 @@
 		</dict>
 	</array>
 	<key>version</key>
-	<string></string>
+	<string>1.0.0</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/voostindie/alfred-markdown-curator-workflow</string>
 </dict>
 </plist>
